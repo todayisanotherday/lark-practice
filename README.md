@@ -12,3 +12,20 @@ larkの練習用リポジトリ
   - チートシート
 - https://www.lark-parser.org/ide/
   - Larkを試す
+
+## markdownのリンクを試す
+
+`[]()` からリンクとテキストを抜き出すだけのもの。記号周りをその場しのぎで定義しているので使いようはない。
+
+```bash
+$ python markdown_link.py
+[['Google', 'https://www.google.com/'], ['Yahoo', 'https://www.yahoo.co.jp/'], ['Amazon', 'https://www.amazon.co.jp/']]
+```
+
+実行方法。
+
+```bash
+$ pipenv shell
+$ cd markdown
+$ python markdown_link.py
+```
