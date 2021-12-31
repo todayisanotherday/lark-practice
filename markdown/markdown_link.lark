@@ -1,0 +1,17 @@
+links : (link)*
+link : "[" text "](" url ")"("\n")*
+
+text : (WORD)*
+url  : (WORD)*
+
+LCASE_LETTER: "a".."z"
+UCASE_LETTER: "A".."Z"
+UNICODE_LETTER: /[u"\u4e00-\u9fa5"]/
+SYMBOL: "/" | ":" | "."
+
+LETTER: UCASE_LETTER | LCASE_LETTER | UNICODE_LETTER | SYMBOL
+WORD: (LETTER)+
+
+%import common.ESCAPED_STRING
+%import common.WS
+%ignore WS
